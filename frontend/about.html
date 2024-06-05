@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/x.png" type="image/png">
+
+  </head>
+  <body>
+    <header>
+      <nav><a href="home.html">
+        <h1>Embedded systems heaven</h1>
+    </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+            <a href="addarticle.html">
+              <li>Add article</li>
+          </a>
+          <li><a href="#section1">Posts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="has-submenu">
+                  Posts
+                  <ul class="submenu">
+                      <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                      <li><a href="post2.html">Serial Data Transmission</a></li>
+                      <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                      <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                      <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                      <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                  </ul>
+              </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <button id="hover-button">☰</button>
+            
+        </div>
+    </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+      document.getElementById('sidebar').style.left = '0';
+    });
+    
+    document.getElementById('sidebar').addEventListener('mouseleave', function() {
+      document.getElementById('sidebar').style.left = '-250px';
+    });
+    
+    document.getElementById('sidebar').addEventListener('mouseover', function() {
+      document.getElementById('sidebar').style.left = '0';
+    });</script>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference and apply it
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+    </script>
+          <h2>About Embedded systems heaven</h2>
+          <p>Welcome to Embedded Systems Heaven! We are Oualid Qobebi and Anass Aslane, two passionate Embedded Systems Engineering students from the Institut National des Postes et Télécommunications (INPT) in Rabat.
+
+            At Embedded Systems Heaven, our mission is to create a comprehensive resource for anyone interested in the world of embedded systems. Whether you are a fellow student, a professional, or simply a technology enthusiast, our website is designed to provide valuable insights, tutorials, and the latest news in embedded systems technology.
+            
+            Join us on this exciting journey as we explore the intricacies of embedded systems, share our projects, and contribute to the growing community of embedded systems enthusiasts. We aim to make complex concepts accessible and to inspire innovation through practical knowledge and hands-on experience.
+            
+            Thank you for visiting Embedded Systems Heaven. Together, let's dive into the fascinating world of embedded systems! </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+      

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Article</title>
+    <link rel="stylesheet" href="full-article-style.css">
+    <link rel="icon" href="images/x.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1 id="articleTitle"></h1>
+        <p id="articleContent"></p>
+        <a href="home.html">Back to Home</a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title');
+            const content = urlParams.get('content');
+            if (title && content) {
+                document.getElementById("articleTitle").textContent = decodeURIComponent(title);
+                document.getElementById("articleContent").textContent = decodeURIComponent(content);
+            }
+        });
+    </script>
+</body>
+</html>
+

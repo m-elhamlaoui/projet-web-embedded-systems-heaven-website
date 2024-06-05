@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Systems heaven</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <nav>
+    <header><a href="home.html">
+        <h1>Embedded systems heaven</h1>
+    </a></header>
+</nav>
+
+    <div class="container">
+        <h1>Embedded Tools</h1>
+        
+        <div class="tool" id="decimalToBinary">
+            <h2>Decimal to Binary Converter</h2>
+            <input type="number" id="decimalInput" placeholder="Enter Decimal">
+            <button onclick="convertDecimalToBinary()">Convert</button>
+            <p>Binary: <span id="binaryOutput"></span></p>
+        </div>
+        
+        <div class="tool" id="binaryToDecimal">
+            <h2>Binary to Decimal Converter</h2>
+            <input type="text" id="binaryInput" placeholder="Enter Binary">
+            <button onclick="convertBinaryToDecimal()">Convert</button>
+            <p>Decimal: <span id="decimalOutput"></span></p>
+        </div>
+        
+        <div class="tool" id="hexToDecimal">
+            <h2>Hexadecimal to Decimal Converter</h2>
+            <input type="text" id="hexInput" placeholder="Enter Hexadecimal">
+            <button onclick="convertHexToDecimal()">Convert</button>
+            <p>Decimal: <span id="hexDecimalOutput"></span></p>
+        </div>
+        
+        <div class="tool" id="decimalToHex">
+            <h2>Decimal to Hexadecimal Converter</h2>
+            <input type="number" id="decimalHexInput" placeholder="Enter Decimal">
+            <button onclick="convertDecimalToHex()">Convert</button>
+            <p>Hexadecimal: <span id="decimalHexOutput"></span></p>
+        </div>
+
+        <div class="tool" id="asciiConverter">
+            <h2>ASCII Converter</h2>
+            <input type="text" id="asciiCharInput" maxlength="1" placeholder="Enter Character">
+            <button onclick="convertCharToAscii()">Convert to ASCII</button>
+            <p>ASCII: <span id="asciiOutput"></span></p>
+            
+            <input type="number" id="asciiNumInput" placeholder="Enter ASCII Value">
+            <button onclick="convertAsciiToChar()">Convert to Character</button>
+            <p>Character: <span id="charOutput"></span></p>
+        </div>
+
+        <div class="tool" id="bitwiseCalculator">
+            <h2>Bitwise Calculator</h2>
+            <input type="text" id="bitwiseInput1" placeholder="Enter Binary 1">
+            <input type="text" id="bitwiseInput2" placeholder="Enter Binary 2">
+            <button onclick="calculateBitwise('AND')">AND</button>
+            <button onclick="calculateBitwise('OR')">OR</button>
+            <button onclick="calculateBitwise('XOR')">XOR</button>
+            <button onclick="calculateBitwise('NOT')">NOT</button>
+            <p>Result: <span id="bitwiseOutput"></span></p>
+        </div>
+
+        <div class="tool" id="crcCalculator">
+            <h2>CRC Calculator</h2>
+            <input type="text" id="crcInput" placeholder="Enter Data">
+            <button onclick="calculateCRC()">Calculate CRC</button>
+            <p>CRC: <span id="crcOutput"></span></p>
+        </div>
+
+        <div class="tool" id="parityBit">
+            <h2>Parity Bit Generator and Checker</h2>
+            <input type="text" id="parityInput" placeholder="Enter Binary">
+            <button onclick="generateParity()">Generate Parity</button>
+            <p>Parity: <span id="parityOutput"></span></p>
+        </div>
+
+        <div class="tool" id="frequencyToPeriod">
+            <h2>Frequency to Period Converter</h2>
+            <input type="number" id="frequencyInput" placeholder="Enter Frequency (Hz)">
+            <button onclick="convertFrequencyToPeriod()">Convert</button>
+            <p>Period: <span id="periodOutput"></span> seconds</p>
+        </div>
+        <div class="tool" id="pwmDutyCycle">
+            <h2>PWM Duty Cycle Calculator</h2>
+            <input type="number" id="highTimeInput" placeholder="Enter High Time (s)">
+            <input type="number" id="periodTimeInput" placeholder="Enter Period Time (s)">
+            <button onclick="calculatePWMDutyCycle()">Calculate</button>
+            <p>Duty Cycle: <span id="dutyCycleOutput"></span>%</p>
+        </div>
+
+        <div class="tool" id="ohmsLaw">
+            <h2>Ohm's Law Calculator</h2>
+            <input type="number" id="voltageInput" placeholder="Enter Voltage (V)">
+            <input type="number" id="currentInput" placeholder="Enter Current (A)">
+            <input type="number" id="resistanceInput" placeholder="Enter Resistance (Ω)">
+            <button onclick="calculateOhmsLaw()">Calculate</button>
+            <p>Result: <span id="ohmsLawOutput"></span></p>
+        </div>
+
+        <div class="tool" id="resistorColorCode">
+            <h2>Resistor Color Code Calculator</h2>
+            <input type="text" id="colorBandsInput" placeholder="Enter Color Bands (e.g., 'red,blue,green')">
+            <button onclick="calculateResistorValue()">Calculate</button>
+            <p>Resistance: <span id="resistorValueOutput"></span> Ω</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

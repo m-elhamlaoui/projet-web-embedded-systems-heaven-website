@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/x.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html">
+        <h1>Embedded systems heaven</h1>
+         </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+          </a>
+          <a href="addarticle.html">
+            <li>Add article</li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <main>
+        <div class="container">
+          <div class="sidebar" id="sidebar">
+              <h2>Sidebar</h2>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li class="has-submenu">
+                    Posts
+                    <ul class="submenu">
+                        <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                        <li><a href="post2.html">Serial Data Transmission</a></li>
+                        <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                        <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                        <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                        <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                    </ul>
+                </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="main-content">
+              <button id="hover-button">☰</button>
+              
+          </div>
+      </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseleave', function() {
+        document.getElementById('sidebar').style.left = '-250px';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });</script>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  const body = document.body;
+
+  // Check for saved user preference and apply it
+  if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+  }
+
+  toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+
+      // Save user preference to localStorage
+      if (body.classList.contains('dark-mode')) {
+          localStorage.setItem('darkMode', 'enabled');
+      } else {
+          localStorage.setItem('darkMode', 'disabled');
+      }
+  });
+});
+</script>
+      <section>
+        <div class="banner_image">
+          <img src="images/ap.jpg" alt="data transmission" />
+        </div>
+        <h1>Serial Data Transmission</h1>
+        <div class="about-author">
+          <h3>Written by Jack Ganssle</h3>
+          <p>Juin 2024</p>
+        </div>
+      </section>
+      <hr />
+      <article>
+       
+        <h2><span class="highlight">Serial Communications</span> </h2>
+        <p>
+          Wires cost money and are typically unreliable. It's fascinating to study the early development of the telegraph, the first electric device intended for long distance communication. The earliest versions used 5 wires, each of which deflected a compass needle at the receiving end. A crude binary code (the first four needles deflecting left and the last going right means "z") let signalers send messages over distances approaching a kilometer.
+
+It wasn't long before engineers compacted the code into a stream of data, recognizable on a single compass needle. By 1838 von Steinheil realized a single wire was enough; the earth itself could form a return circuit.
+
+Samuel Morse defined a standard set of codes for each character. He tried to minimize the code's "cost"; the more frequently used letters used shorter codes. This greatly predates our obsession with compression, but was surely a step in the same direction.
+
+Now, of course, Morse's original code is no longer used. Modern code is properly called "International Morse" to differentiate it from it's dead predecessor.
+
+Conceptually, Morse took the first critical steps towards modern data transmission. A complex message could be encoded onto a single wire by defining a character as a string of components, each of which was transmitted one after the other (hence the name "serial transmission").
+
+Long, long ago in the pre-computer dark ages the military and weather services, later followed by the news agencies, sent text data between sites using various versions of a device called the teletype. These beasts were purely mechanical - somewhat like early electric typewriters - and converted keystrokes to series of ones and zeroes representing each character.
+
+Early models encoded characters into Baudot, a 5 bit code... resulting in a maximum possible 32 characters. Needless to say, you can't even encode all of the letters and numbers in a 32 bit space, so "shift up" and "shift down" characters, which toggled character sets were added, essentially doubling capacity to 64 characters (minus the two allocated to shifting).
+
+The 5 bit code used by these early teletypes was quite a bit different than Morse code. Each bit could be only a one or a zero, and always occupied the same amound of time. Morse, of course, uses a different number of elements (dots and dashes) in each character, and differentiates the two possible elements by length (a dash is three times as long as a dot).
+
+In the early 70s, as a broke college kid, I built a 12 bit machine out of TTL components. A scrounged model 15 teletype did console duty. Each character started a quarter horsepower motor that sequenced an breathtaking number of levers and shafts to select the correct print hammer. The entire room vibrated in sync to its rhythm. Visitors stared aghast at the beast; the neighbors downstairs pounded in syncopated rhythm.
+
+Clearly, a 5 bit code just won't cut it for real computing applications. Baudot was eventually replaced by ASCII, though not until other variations (EBCDIC, FIELDDATA, etc.) were tried. Thankfully the CRT terminal came along, it's screen acting as a digital version of the hideously mechanical teletype.
+        </p>
+        
+        <h2><span class="highlight">RS-232</span></h2>
+        <p>
+          RS-232, as has been extended for microcomputer communications, defines signal levels, transfer parameters, and cabling for serial communications over short (under about 50 feet) distances. Of course, different vendors implement various aspects of the standard in different ways, so devices hardly ever work together without some frantic wire swapping.
+
+RS-232 communications is always serial, taking place one bit at a time. Each of the 8 bits of a byte are sequentially sent out over a single pair of wires in a specific order: the least significant bit goes first, followed by bit 1, etc.
+
+So, this oh-so-modern communication method is no more than a slight upgrade over the von Steinheil's ancient compass needles. There's little new under the sun.
+
+All RS-232 communications takes place at a baud rate agreed on by both the driver and receiver. 9600 baud means that each bit of the character stream takes 1/9600 second to transmit - about 100 microseconds. Since the transmitter sends neither clock nor other timing information, it's up to the receiver to figure out when to sample the stream to determine if an individual bit is a one or a zero. Clearly, if the transmitter and receiver each are set to different baud rates, the receiver will never sample the input stream at the correct time.
+
+RS-232 data embeds the 8 bit character within at least two other bits as shown in Figure 1. Every character starts with a "start" bit - the transmitter drives the line to a logic one state for exactly one bit period (e.g., at 9600 baud, 1/9600 second). Bit zero follows. To prevent one character running into another a stop bit - a logic zero - follows the character.
+
+These two bits "frame" the character. You may have run into a "framing error" from time to time. This simply indicates that the start/stop sequence was not properly detected by the receiver.
+
+Suppose the transmitter sends the character "A", which is hex 41. Figure two shows the data on the line. When the link is idle (no data being sent) it is in the Marking state (the line is more negative than -3 volts). The Start bit, which puts the line into the Spacing state (more positive than +3 volts) for one bit period, is sent first and serves to announce that a character is on the way. The receiver senses the start bit and sets itself up to read the incoming serialized byte.
+
+Data bits follow Start. The least significant (data bit 0) goes first - in this case, a logic 1. One at a time, the other bits follow, each being given exactly one bit time on the link. The "A" has only two data bits, plus the stop bit, set to a one, as you can clearly see in the figure.
+
+After the entire character has been transferred the line goes to the marking state for the length of the stop bit - one or two bit times depending on the protocol agreed to by the communicating devices. Stop bits look like an idle line and give the receiver time to recover before the next character starts. Note that if a parity bit is defined, it is inserted immediately after data bit 7.
+
+The RS-232 standard defines pinouts for Data Communications equipment (DCE) and Data Terminal Equipment (DTE). Terminals are DTE. Computers seem to be DTE or DCE depending on th` whim of the designer. The IBM PC is DTE.
+        </p>
+        <h2><span class="highlight">The Wires</span></h2>
+        <p>
+          The RS-232 standard defines 25 signals used to transmit data and control the communications channel. Seldom do we see so many actually used, which is one source of grief with connecting serial devices - it seems each device requires a different number of the signals.
+
+          The following table lists the most common signals in PC and embedded work, both for the 25 and 9 pin connector configurations.
+        </p>
+        <table>
+          <tr>
+            <th>Pin Number</th>
+            <th>Direction</th>
+            <th>Pin Name</th>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>7</td>
+            <td>Transmitted data from DTE</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>Received data from DCE</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>Clear to send (DCE ready to receive data)</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>Clear to send (DCE ready to receive data)</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>5</td>
+            <td>Data set ready (transmit device power is on)</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>4</td>
+            <td>Data terminal ready (receive device power is on)</td>
+          </tr>
+        </table>
+        <h2><span class="highlight">The Hardware</span></h2>
+        <p>
+            Many embedded systems save wiring by using a simple three-wire connection: ground, transmit data, and receive data. Software handshaking uses the X-on and X-off characters, transmitted buy 
+            the receiver, to throttle the transmitter. With some clever electronics you can even feed both data directions onto a single phone line pair, permitting world-wide communications over the existing phone system.
+There's only one problem.
+Computer busses are wide. Even a small computer moves data around in 8 bit chunks. Either the processor must painstakingly convert each character to and from a bit stream, 
+or we have to add hardware to do the work automatically.
+In fact, virtually every system does use hardware. The UART (Universal Asynchronous Receiver/Transmitter) or USART (Universal Synchronous/Asynchronous Receiver/Transmitter) is a chip that 
+does this conversion for you. Asynchronous
+transmission is exactly what we've been looking at: the characters move at a pace determined by the baud rate. Synchronous transmission is relative to an external clocking source, one 
+that is often transmitted on an additional wire.
+UARTs were some of the earliest integrated peripherals. They are complex devices - thousands of transistors - not something you'd care to create out of ordinary TTL components.
+A single UART handles both transmission and reception of data. Shift registers convert between the parallel computer data and the serial stream, with start, stop and parity bits. There's not
+ much complexity to a pair of shift registers. Most of the trouble lies in figuring out exactly when to sample a received data stream. Suffice to say that the silicon wizards work out the timing.
+The hardware engineer views a UART as a device connected to the serial level shifters by receiver, transmit, and perhaps handshaking wires. It goes to the computer via an 8 bit data bus, 
+a chip select signal, and some other control lines.
+Software gurus never really see the serial stream. Characters are magically assembled in the receiver; the software simply sees that data is available, and then reads an I/O port to get the received character. 
+Transmission is the reverse: a single bit on some port indicates that the transmitter is not busy, so you write a byte to the UART data port and let the code go to its next duty. The UART takes care of shifting it out the serial port.
+        </p>
+        <h2><span class="highlight">Software Issues</span></h2>
+        <p>Most UARTs can only queue one, or at best a handful, of characters in its internal buffers. With software running at warp speed you will surely overrun the buffers when trying to send a long string of data. Though the device
+           does supply software handshake lines (transmit buffer empty and receive data available), it makes little sense to leave the CPU idly polling the UART, waiting for a slow transmission, when the time could be better used elsewhere.
+           Every UART has some provision for interrupt-based operation to better optimize the code.
+           Handling transmit interrupts can be just a bit tricky, though. Generally the UART interrupts on the transmit buffer empty condition, telling the program it's time to write out the next transmit character. The code starts the Interrupt
+           Service Routine (ISR), pulls a character from a software buffer, writes it to the UART, and returns. All is well.
+          What happens if there are no more characters to send? The transmit buffer empty condition will be set forever; if the ISR returns having done nothing (cleverly recognize that there 
+          were no more queued characters to send), the interrupt will immediately restart the ISR, starting an interrupt loop that brings the system to its knees.
+          The ISR must recognize that it's work is done, and disable the transmitter (or, at least disable transmit interrupts) by writing the appropriate bytes to the UART's control register. 
+          Then, the transmit routine should recognize that the UART is off, restart it, and only then start queuing data again.
+        </p>
+      </article>
+    </main>
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

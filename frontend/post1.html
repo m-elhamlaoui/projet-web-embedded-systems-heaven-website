@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/x.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav><a href="home.html">
+        <h1>Embedded systems heaven</h1>
+    </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+            <a href="addarticle.html">
+              <li>Add article</li>
+          </a>
+
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="has-submenu">
+                  Posts
+                  <ul class="submenu">
+                      <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                      <li><a href="post2.html">Serial Data Transmission</a></li>
+                      <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                      <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                      <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                      <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                  </ul>
+              </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <button id="hover-button">☰</button>
+            
+        </div>
+    </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+      document.getElementById('sidebar').style.left = '0';
+    });
+    
+    document.getElementById('sidebar').addEventListener('mouseleave', function() {
+      document.getElementById('sidebar').style.left = '-250px';
+    });
+    
+    document.getElementById('sidebar').addEventListener('mouseover', function() {
+      document.getElementById('sidebar').style.left = '0';
+    });</script>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference and apply it
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+    </script>
+      <div class="banner_image">
+        <img src="images/esa.png" alt="embedded systems" />
+      </div>
+      <h1>An Overview of Embedded Systems</h1>
+      <div class="about-author">
+        <h3>Written by Aslane Anass & Qobebi Oualid</h3>
+        <p>Wednesday May 15</p>
+      </div>
+
+      <hr />
+      <article>
+        <div>
+        <p>
+          <span class="paragraph">
+            Embedded systems are specialized computing systems designed to
+            perform dedicated functions within larger mechanical or electronic
+            systems. Unlike general-purpose computers, which can run a variety
+            of applications, embedded systems are tailored for specific tasks
+            and often operate under real-time constraints. They are
+            characterized by their dedicated functionality, integration with
+            hardware, and efficiency in resource-constrained environments.
+            Common examples of embedded systems include consumer electronics
+            like smartphones and smart TVs, automotive systems such as engine
+            control units and anti-lock braking systems, industrial automation
+            tools like programmable logic controllers, home appliances such as
+            washing machines and smart thermostats, and medical devices
+            including pacemakers and infusion pumps. The development process
+            involves design, prototyping, programming, testing, and optimization
+            to ensure reliability and performance. Embedded systems play a
+            crucial role in modern technology, providing control, automation,
+            and intelligence across a wide range of applications.
+          </span>
+        </p>
+      </div>
+        <h2><span class="highlight">The importance of embedded systems</span></h2>
+        <p>
+          <span class="paragraph">
+            Embedded systems are vital to modern society, impacting daily life
+            and various industries. They power consumer electronics like
+            smartphones and smart TVs, enhance automotive systems for better
+            performance and safety, and are crucial in medical devices improving
+            patient care. In industrial automation, they increase efficiency and
+            safety, while in telecommunications, they ensure reliable
+            communication. Embedded systems also play key roles in energy
+            management, environmental monitoring, and the Internet of Things
+            (IoT), enabling smart grids, data collection, and connected devices.
+            Additionally, they are essential in military technologies for
+            national security. Overall, embedded systems drive innovation,
+            improve productivity, and foster technological advancements, shaping
+            the future of our world.
+          </span>
+        </p>
+        <h2><span class="highlight">How do embedded systems work?</span></h2>
+        <p>
+          Embedded systems are computers. Therefore, like most other computers,
+          they contain a combination of hardware and software such as
+          microprocessors, microcontrollers, volatile and non-volatile memory,
+          graphics processing units (GPUs), input/output communication
+          interfaces and ports, power supplies, and system and application code.
+          However, embedded systems have four main factors that differentiate
+          them from a typical workstation or server: purpose, design, cost, and
+          human involvement. Like any other computer, embedded systems leverage
+          printed circuit boards (PCBs) programmed with software that guides the
+          hardware on operation and data management using memory and input/output
+          communication interfaces. The result is the terminal production of
+          output that is of value to the end user. As such, at a fundamental
+          level, embedded systems are not too different from workstations and
+          servers.
+        </p>
+        <h2><span class="highlight">Types of embedded systems</span></h2>
+        <p>
+          When considering performance and functional requirements, embedded
+          systems are categorized into real-time embedded systems, standalone
+          embedded systems, networked embedded systems, and mobile embedded
+          systems.
+        </p>
+        <p>
+        <ul style="list-style-type:circle;">
+          <li>
+            <span class="highlight">Real-time embedded systems</span> prioritize prompt
+            output generation and can be classified as soft real-time (lenient
+            deadlines) or hard real-time (strict deadlines).
+          </li>
+          <li>
+            <span class="highlight">Standalone embedded systems</span> can function
+            independently without a host computer.
+          </li>
+          <li>
+            <span class="highlight">Networked embedded systems</span> rely on network
+            connections and communication for output generation.
+          </li>
+          <li>
+            <span class="highlight">Mobile embedded systems</span> refer to small,
+            portable devices such as smartphones and laptops.
+          </li>
+        </ul>
+        Finally, when classified based on microcontroller performance, embedded
+        systems are divided into small-scale, medium-scale, and sophisticated
+        categories, depending on the bit size of the microcontroller.
+        <h2><span class="highlight">Career Prospects in Embedded Systems</span></h2>
+        <ol>
+          <li>
+            <span class="title1">Embedded Systems Engineer</span>
+            <ul style="list-style-type:circle;">
+              <li>
+                <span class="highlight">Overview:</span> Focuses on designing and
+                developing integrated systems where software and hardware work
+                together seamlessly. This role involves working on both the
+                firmware and hardware aspects of embedded devices.
+              </li>
+              <li>
+                <span class="highlight">Industries:</span> Automotive, consumer
+                electronics, industrial automation, healthcare, aerospace.
+              </li>
+            </ul>
+          <li>
+            <span class="title1">Firmware Engineer</span>
+            <ul style="list-style-type:circle;">
+              <li>
+                <span class="highlight">Overview:</span> Specializes in writing and
+                maintaining the low-level software (firmware) that directly
+                interacts with hardware components. Firmware engineers ensure
+                that devices operate correctly and efficiently.
+              </li>
+              <li>
+                <span class="highlight">Industries:</span> Consumer electronics,
+                telecommunications, medical devices, industrial control systems.
+              </li>
+            </ul>
+          <li>
+            <span class="title1">Embedded Software Developer</span>
+            <ul style="list-style-type:circle;">
+              <li>
+                <span class="highlight">Overview:</span> Develops application-level
+                software for embedded systems, ensuring that the software meets
+                performance and real-time constraints. This role often involves
+                working with operating systems and middleware.
+              </li>
+              <li>
+                <span class="highlight">Industries:</span> Automotive, consumer
+                electronics, IoT devices, smart home technology.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        </p>
+      </article>
+    </main>
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

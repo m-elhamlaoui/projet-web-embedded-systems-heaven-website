@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/x.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html">
+        <h1>Embedded systems heaven</h1>
+         </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+          </a>
+          <a href="addarticle.html">
+            <li>Add article</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="post">
+      <main>
+        <div class="container">
+          <div class="sidebar" id="sidebar">
+              <h2>Sidebar</h2>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li class="has-submenu">
+                    Posts
+                    <ul class="submenu">
+                        <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                        <li><a href="post2.html">Serial Data Transmission</a></li>
+                        <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                        <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                        <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                        <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                    </ul>
+                </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="main-content">
+              <button id="hover-button">☰</button>
+              
+          </div>
+      </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseleave', function() {
+        document.getElementById('sidebar').style.left = '-250px';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });</script>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference and apply it
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+</script>
+      <section>
+        <div class="banner_image">
+          <img src="images/ml0.jpg" alt="machine learning" />
+        </div>
+        <h1>What is Machine Learning? An Intro to ML Basics</h1>
+        <div class="about-author">
+          <h3>Written by Brandon Satrom</h3>
+          <p>June 05, 2022</p>
+        </div>
+      </section>
+      <hr />
+      <article>
+       
+        <h2><span class="highlight">What is Machine Learning?</span> </h2>
+        <p>
+            A subset of the field of artificial intelligence (AI), machine learning is a discipline focused on using mathematical techniques 
+            and large-scale data processing to build programs that can find relationships between input and output data. As an umbrella term,
+            AI covers a broad domain in computer science focused on enabling machines to “think” and act without human intervention. It covers
+            everything from “general intelligence” or the ability for a machine to think and act in the same way a human would, to specialized,
+            task-oriented intelligence, which is where ML falls on the spectrum.
+            One of the most powerful ways that I’ve heard ML defined in the past is in comparison to the traditional, algorithmic approach used 
+            in classical computer programming. In classical computing, an engineer presents a computer with input data—for example, the numbers 
+            2 and 4—as well as an algorithm for converting them into a needed output—for example, multiply x and y to make z. As a program runs,
+            inputs are provided, and the algorithm is applied to produce outputs. This can be seen in Figure 1.
+        </p>
+        <div class="image-container">
+            <img src="images/ml.jpg" alt="algorithm 1">
+            <p class="image-caption">Figure 1. In a classic approach, we supply a computer with input data and the algorithm and ask for an answer</p>
+        </div>
+        <p>
+            ML, on the other hand, is the process of presenting a computer with a set of inputs and outputs and asking the computer to identify 
+            the “algorithm”—or model, using ML parlance—that turns those inputs into outputs every time. Often, this requires a lot of inputs to 
+            ensure the model will properly identify the correct output every time.
+            For example, in Figure 2, if I feed an ML system the numbers 2 and 2 and an expected output of 4, it might decide that the algorithm is
+            to always add the two numbers together. But if I then provide the numbers 2 and 4 and the expected output of 8, the model will learn from
+            two examples that the correct approach is to multiply the two provided numbers.
+        </p>
+        <div class="image-container">
+            <img src="images/ml1.jpg" alt="algorithm 2">
+            <p class="image-caption">Figure 2. With ML, we have the data (inputs) and answers (output) and need the computer to derive an
+                 algorithm of sorts by determining how the inputs and outputs relate in a way that is true for the entire data set.</p>
+        </div>
+        <h2><span class="highlight">Machine Learning Model Development, Training, Testing, Refining</span> </h2>
+        <p>
+            After data collection, the next steps are model development, training, testing, and refinement. This phase is where a data scientist
+            or engineer creates a program that ingests the mass of collected input data and transforms it into the expected outputs using one or
+            more approaches. Explaining those approaches could fill volumes, but suffice it to say that most models perform a set of 
+            transformations (for example, vector and matrix multiplication) on their inputs. Additionally, they will adjust the weights of each
+            and every input against each other in order to find a set of weights and functions that reliably correlate to the expected outputs
+            This phase of the process is often iterative. The engineer will adjust the model, the tools, and methods used, as well as the number 
+            of iterations to run during model training and other parameters to build something that reliably can correlate the input data to the 
+            correct outputs (aka, the labels). Once the engineer is happy with this correlation, they test the model using inputs not used in 
+            training to see how the model performs on unknown data. If the model underperforms on this new data, the engineer repeats the loop,
+            shown in Figure 4, and refines the model further.
+        </p> 
+        <div class="image-container">
+            <img src="images/ml3.jpg" alt="data">
+            <p class="image-caption">Figure 1. In a classic approach, we supply a computer with input data and the algorithm and ask for an answer</p>
+        </div>
+        <h2><span class="highlight">So Where Does TinyML Fit?</span></h2>
+        <p>
+            If it’s not clear already, machine learning is a data-intensive process. When you are attempting to derive a model through correlation
+            you need a lot of data to feed that model. Hundreds of images or thousands of sensor readings. In fact, the process of model training
+            is so intensive, and so specialized, that it’s a resource hog for almost any central processing unit (CPU), no matter how 
+            high-powered. Instead, the vector and matrix-math operations so common in ML are not dissimilar from graphics processing applications,
+            which is why GPUs have become such a popular choice for model development.
+            Given the need for powerful compute, the cloud has become the de-facto place to offload the work of training models and hosting them 
+            for real-time prediction. While model training is, and remains the domain of the cloud, especially for embedded and IoT applications,
+            the closer we can move our ability to make real-time predictions to the place where data is captured, the better our systems will be.
+            We get the benefit of built-in security and low latency when running models on microcontrollers, as well as the ability to make 
+            decisions and take action in a local environment, without relying on an internet connection to do so.
+            This is the domain of TinyML, where platform companies like Edge Impulse are building cloud-based tools for sensor data collection and 
+            ML architectures that output compact, efficient models purpose-built for microcontroller units (MCUs). Where an increasing number of 
+            silicon vendors, from STMicroelectronics to Alif Semiconductor are building chips with GPU-like compute capabilities that make them
+            perfect for running ML workloads alongside your sensors, right where data is collected.
+            For embedded and IoT engineers, there’s never been a better time to explore the world of machine learning, from the cloud to the 
+            tiniest of devices. Our systems are only growing more complex and processing more data than ever. Bringing ML to the edge means we can
+            deal with that data and make decisions even faster.
+        </p>
+      </article>
+    </main>
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+
+
+    </footer>
+  </body>
+</html>

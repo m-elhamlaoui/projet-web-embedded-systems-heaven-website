@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/x.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html">
+          <h1>Embedded systems heaven</h1>
+        </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+          </a>
+          <a href="addarticle.html">
+            <li>Add article</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="post">
+      <main>
+        <div class="container">
+          <div class="sidebar" id="sidebar">
+              <h2>Sidebar</h2>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li class="has-submenu">
+                    Posts
+                    <ul class="submenu">
+                        <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                        <li><a href="post2.html">Serial Data Transmission</a></li>
+                        <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                        <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                        <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                        <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                    </ul>
+                </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="main-content">
+              <button id="hover-button">☰</button>
+              
+          </div>
+      </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseleave', function() {
+        document.getElementById('sidebar').style.left = '-250px';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });</script>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference and apply it
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+</script>
+      <section>
+        <div class="banner_image">
+          <img src="images/tr2.png" alt="banner" />
+        </div>
+        <h1>Power Dissipation of a CMOS Inverter</h1>
+        <div class="about-author">
+          <h3>Written by Robert Keim   </h3>
+          <p>May 15, 2024</p> </div>
+          <div>
+        </div>
+      </section>
+      <hr />
+      <article>
+        <h2><span class="highlight">This article explains dynamic and static power consumption in a CMOS inverter circuit.</span> </h2>
+        <p><span class="paragraph">
+            The development of the CMOS inverter, which provides essential functionality for integrated circuits, was a turning point in the history of technology.
+             This logic circuit highlights the electrical properties that make CMOS so uniquely suitable for high-density, high-performance digital systems.
+            One advantage of CMOS is its efficiency. CMOS logic requires current flow only when changing states—a CMOS circuit that’s simply maintaining a logic-high or logic-low 
+            voltage dissipates very little power. Low power dissipation is a desirable feature in general, and it’s particularly beneficial when you’re trying to pack as much
+            transistor functionality as possible into a small space.
+            As computer CPU fans remind us, adequately removing heat from an integrated circuit can be difficult. It would be far more difficult without the CMOS
+            inverter and other, similar CMOS circuits. In this article, the first in a three-part series, we’ll review key characteristics of the CMOS inverter and
+            discuss its two primary types of power dissipation: dynamic and static. We'll delve more deeply into dynamic power dissipation in the next two articles.
+            </span> 
+            <h2><span class="highlight">TStructure and Operation of a CMOS Inverter</span> </h2>
+        <p><span class="paragraph">
+            A CMOS inverter is composed of an NMOS transistor and a PMOS transistor connected together. Figure 1 shows the schematic for a basic CMOS inverter.
+            </span> 
+            <div class="image-container">
+                <img src="images/tans1.jpg" alt="banner">
+                <p class="image-caption">Figure 1. A CMOS digital inverter uses one NMOS and one PMOS transistor.</p>
+            </div>
+        </p>
+        <p>The basic operation of a CMOS inverter is quite straightforward:
+            <ul style="list-style-type:circle;">
+                <li>When the input terminal is driven to the logic-high voltage, the upper PMOS transistor blocks current and the lower NMOS transistor conducts current.
+                     The output terminal is thus connected to 0 V through a low-resistance path.
+               </li>
+               <li>
+                When the input terminal is driven to the logic-low voltage, the PMOS conducts and the NMOS blocks. The output is connected through a low-resistance path to VDD.
+               </li>
+            </ul>
+            In this way, a logic-high input creates a logic-low output, and a logic-low input creates a logic-high output.</p>
+            
+        </p>
+        <h2><span class="highlight">Dynamic Power Consumption</span> </h2>
+        <p><span class="paragraph">
+            Power is consumed whenever current is flowing through a conductive element. We see this relationship in the basic formula for electric power:
+            P = V &bull; I</p>
+            Though a CMOS inverter doesn’t require current flow in its steady state, power is consumed during its logic transitions. 
+            This dynamic power loss comes in two types:
+            <ul style="list-style-type:circle;">
+                <li>Switching power dissipation.
+               </li>
+               <li>
+                Short-circuit power dissipation.
+               </li>
+            </ul>
+            Let’s take a look at each.</p>
+        </span>
+               
+        </p>
+        <h2><span class="highlight">Switching Power Dissipation</span> </h2>
+        <p><span class="paragraph">
+            When an input logic transition occurs, transient current must flow in order to charge or discharge capacitance in the circuit. 
+            During a low-to-high output transition, current flows to charge up the load capacitance as the output voltage increases to VDD. 
+            Figure 2 shows the path taken by this current.</p>
+            <div class="image-container">
+                <img src="images/fr.jpg" alt="banner">
+                <p class="image-caption">Figure 2. The flow of charging current during a low-to-high output transition.</p>
+            </div>
+            Current also flows during a high-to-low output transition (Figure 3), discharging capacitance as the output voltage decreases to ground potential.
+            <div class="image-container">
+                <img src="images/fr1.jpg" alt="banner">
+                <p class="image-caption">Figure 3. The flow of discharge current during a high-to-low output transition.</p>
+            </div>
+            To estimate the switching loss of a CMOS inverter, we use the following equation:
+                          <p>         P<sub>switching</sub>=f* C <sub>L</sub>*V <sub>DD</sub><sup>2</sup>  </p> 
+                          <p>
+                            where:
+
+                            C <sub>L</sub> is the expected load capacitance and f is the switching frequency.</p> 
+
+      </article>
+    </main>
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+
+    </footer>
+  </body>
+</html>

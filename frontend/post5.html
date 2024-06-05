@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/x.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heave</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html">
+            <h1>Embedded systems heaven</h1>
+        </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+          </a>
+          <a href="addarticle.html">
+            <li>Add article</li>
+
+        </ul>
+      </nav>
+    </header>
+    <main class="post">
+      <main>
+        <div class="container">
+          <div class="sidebar" id="sidebar">
+              <h2>Sidebar</h2>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li class="has-submenu">
+                    Posts
+                    <ul class="submenu">
+                        <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                        <li><a href="post2.html">Serial Data Transmission</a></li>
+                        <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                        <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                        <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                        <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                    </ul>
+                </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="main-content">
+              <button id="hover-button">☰</button>
+              
+          </div>
+      </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseleave', function() {
+        document.getElementById('sidebar').style.left = '-250px';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });</script>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference and apply it
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+</script>
+      <section>
+        <div class="banner_image">
+          <img src="images/ryzen.jpg" alt="banner" />
+        </div>
+        <h1>AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</h1>
+        <div class="about-author">
+          <h3>Written by Jake Hertz</h3>
+          <p>May 16, 2024</p>
+        </div>
+      </section>
+      <hr />
+      <article>
+        <h2><span class="highlight">Amid market trends toward higher integration, AMD has released two new processors that strip things back.</span> </h2>
+        <p>
+            This week, AMD silently released two new Ryzen processors, the <a href="https://www.amd.com/en/products/processors/desktops/ryzen/8000-series/amd-ryzen-7-8700f.html"><span class="l"> Ryzen 7 
+                8700F</span></a> and <a href="https://www.amd.com/en/products/processors/desktops/ryzen/8000-series/amd-ryzen-5-8400f.html"><span class="l"> Ryzen 5 8400F
+                </span></a>. Both defy market trends by decreasing integration
+             and omitting AMD's RDNA 3 on-chip graphics-processing engines. 
+        </p>
+        <div class="image-container">
+            <img src="images/amd.jpg" alt="banner">
+            <p class="image-caption">The Ryzen 7 8700F and Ryzen 5 8400F are entry-level socket AM5 gaming chips without "iGPUs." Image (modified) used courtesy 
+                of<a href="https://www.amd.com/en.html"><span class="l"> 
+                AMD</span></a>  </p>
+        </div>
+            <h2><span class="highlight">Ryzen Fills the Mid-Range Market Gap</span> </h2>
+        <p>
+            AMD strategically positioned the<a href="https://www.amd.com/en/products/processors/desktops/ryzen/8000-series/amd-ryzen-7-8700f.html"><span class="l"> Ryzen 7 
+            8700F</span></a> and <a href="https://www.amd.com/en/products/processors/desktops/ryzen/8000-series/amd-ryzen-5-8400f.html"><span class="l"> Ryzen 5 8400F
+            </span></a> to fill a gap in AMD's processor offerings. These chips cater to users who need robust
+             CPU performance without the additional cost or power consumption associated with integrated graphics. 
+        </p>  
+        <div class="image-container">
+            <img src="images/ryzen 8000.jpg" alt="banner">
+            <p class="image-caption">AMD’s new Ryzen 8000 F-Series processors. Image used courtesy of <a href="https://x.com/momomo_us?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><span class="l"> @momomo_us </span></a>
+               on X</p>
+        </div>
+            <p>The Ryzen 7 8700F features eight cores and 16 threads, operating at a base clock speed of 4.1 GHz and a boost clock of up to 5 GHz. Built on a
+                TSMC 4-nm FinFET process, this processor offers a total L2 cache of 8 MB and 16 MB of L3 cache. Similarly, the Ryzen 5 8400F targets the mid-range
+                market with six cores and 12 threads, a base clock of 4.2 GHz, and a boost clock of 4.7 GHz. Also built on a TSMC 4-nm FinFET process, this processor
+                offers a total L2 and L3 cache of 6 MB and 16 MB, respectively. Both processors leverage a Zen-4 architecture.
+                One key consideration for any new processor is its thermal design power (TDP) and how it manages heat dissipation. The Ryzen 7 8700F and Ryzen 5 8400F
+                have default TDP ratings of 65 W, making them suitable for a variety of cooling solutions, from air coolers to more sophisticated liquid cooling setups.
+                AMD recommends pairing the new processors with AMD Wraith Stealth coolers, which are designed to efficiently dissipate heat from the CPU while 
+                operating quietly and fitting comfortably in compact system builds.</p>
+                <h2><span class="highlight">The Benefits of Omitting Graphics Cards</span> </h2>    
+                <p>AMD intentionally excluded graphics processors from the new devices to cater to a specific market segment that 
+                    prioritizes CPU performance over graphical capabilities. This focus results in better processing power and efficiency, 
+                    which boosts the performance of computational tasks.
+                    Integrated graphics add to a CPU's thermal and power requirements. By eliminating this component, AMD can design a more thermally 
+                    efficient chip that consumes less power. This is particularly beneficial for users operating in thermally constrained environments
+                    or seeking to build compact systems with less robust cooling solutions.</p>
+                <div class="image-container">
+                <img src="images/ry.jpg" alt="banner">
+                <p class="image-caption">Dedicated versus integrated GPUs. Image (cropped) used courtesy of<a href="https://www.cgdirector.com/igpu-vs-dgpu/"><span class="l"> CGDirector
+                </span></a>
+                
+              </p>
+             
+      </article>
+      <canvas id="myChart"></canvas>
+    </main>
+ 
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+
+    </footer>
+     <!-- Include Chart.js from CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <!-- Include the custom script -->
+     <script> document.addEventListener('DOMContentLoaded', function () {
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+          type: 'bar', // Change to 'line', 'pie', etc. for different chart types
+          data: {
+              labels: ['2023', '2022', '2021', '2020', '2019', '2018', '2017','2016','2015','2014','2013','2012'],
+              datasets: [{
+                  label: 'AMD Annual Revenue(Millions of US $)',
+                  data: [22680,23601,16434,9763,6731, 6475, 5253,4319, 3991, 5506, 5299,5422,],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                      'rgba(255, 99, 132, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)',
+                      'rgba(255, 99, 132, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  });</script>
+  </body>
+
+</html>

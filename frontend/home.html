@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/x.png" type="image/png">
+
+  </head>
+  <body>
+    <header>
+      <nav><a href="home.html">
+        <h1>Embedded systems heaven</h1>
+    </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+            <a href="addarticle.html">
+              <li>Add article</li>
+          </a>
+          <li><a href="#section1">Posts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="has-submenu">
+                  Posts
+                  <ul class="submenu">
+                      <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                      <li><a href="post2.html">Serial Data Transmission</a></li>
+                      <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                      <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                      <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                      <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                  </ul>
+              </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <button id="hover-button">☰</button>
+            
+        </div>
+    </div>
+
+      <section id="hero">
+        <div class="hero_content">
+          <h1>Embedded systems heaven</h1>
+
+          <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </div>
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide"><img src="images/all12.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="images/all15.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="images/all17.jpg" alt="Slide 3"></div>
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        
+      </section>
+      <div class="h-card">
+        <div class="card_content">
+          <h2>An Overview of Embedded Systems</h2>
+          <div class="status">
+            <a href="post1.html"><button class="read-btn">Read More</button></a>
+          </div>
+        </div>
+        <img src="images/esa1.png" alt="embedded systems"  class="lightbox-trigger" />
+        <div id="lightbox" class="lightbox">
+          <span class="lightbox-close">&times;</span>
+          <img class="lightbox-content" id="lightbox-image">
+          <div id="lightbox-caption"></div>
+      </div>
+  
+      </div>
+      <section id="section1">
+        
+   
+      <div class="card_container">
+        <div class="card_wrapper">
+          <div class="v-card">
+            <div class="card_content">
+              <h2>Serial Data Transmission</h2>
+              <p>
+                Wires cost money and are typically unreliable. It's fascinating to study the early development of the telegraph,
+                the first electric device intended for long distance communication. The earliest versions used 5 wires...
+              </p>
+              <div class="status">
+                <p>Juin 2024</p>
+                <a href="post2.html"
+                  ><button class="read-btn">Read More</button></a
+                >
+         
+              
+              </div>
+            </div>
+            <img src="images/ap1.jpg" alt="data transmission" class="lightbox-trigger"/>
+            <div id="lightbox" class="lightbox">
+              <span class="lightbox-close">&times;</span>
+              <img class="lightbox-content" id="lightbox-image">
+              <div id="lightbox-caption"></div>
+          </div>
+          </div>
+        </div>
+        <div class="card_wrapper">
+          <div class="v-card">
+            <div class="card_content">
+              <h2>The Easy Solution to the Automotive Chip Shortage</h2>
+              <p>
+                Sometimes one comes across a solution to a problem that is so mind-numbingly ridiculous one has to scream "enough!"
+                We've all heard about how the automotive industry is suffering from a shortage of chips. When the pandemic ...
+              </p>
+              <div class="status">
+                <p>May 15, 2024</p>
+                <a href="post3.html"
+                  ><button class="read-btn">Read More</button></a
+                >
+              </div>
+            </div>
+            <img src="images/aut1.jpg" alt="car" />
+          </div>
+        </div>
+        <div class="card_wrapper">
+          <div class="v-card">
+            <div class="card_content">
+              <h2>Machine Learning and an Intro to ML Basics</h2>
+              <p>
+                A subset of the field of artificial intelligence (AI), machine learning is a discipline focused on using mathematical techniques
+                 and large-scale data processing to build programs that can find relationships between ...
+              </p>
+              <div class="status">
+                <p>8 Feb 2022</p>
+                <a href="post4.html"
+                  ><button class="read-btn">Read More</button></a
+                >
+              </div>
+            </div>
+            <img src="images/ml07.jpg" alt="machine learning" />
+          </div>
+        </div>
+        
+      </div>
+      </section>
+      <div class="h-card">
+        <div class="card_content">
+          <h2>AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</h2>
+          <p>
+            Amid market trends toward higher integration, AMD has released two new processors that strip things back.
+          </p>
+          <div class="status">
+            <p>May 16, 2024</p>
+            <a href="post5.html"><button class="read-btn">Read More</button></a>
+          </div>
+        </div>
+        <img src="images/ryzen7.jpg" alt="ryzen processor" />
+      </div>
+      <div class="h-card">
+        <div class="card_content">
+          <h2>Power Dissipation of a CMOS Inverter</h2>
+          <p>
+            This article explains dynamic and static power consumption in a CMOS inverter circuit.
+          </p>
+          <div class="status">
+            <p>May 15, 2024</p>
+            <a href="post6.html"><button class="read-btn">Read More</button></a>
+          </div>
+        </div>
+        <img src="images/tr4.png" alt="transistor" />
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

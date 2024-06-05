@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/x.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded systems heaven</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html">
+            <h1>Embedded systems heaven</h1>
+            
+        </a>
+        <ul>
+          <a href="home.html">
+            <li>Home</li>
+          </a>
+          <a href="addarticle.html">
+            <li>Add article</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="post">
+      <main>
+        <div class="container">
+          <div class="sidebar" id="sidebar">
+              <h2>Sidebar</h2>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li class="has-submenu">
+                    Posts
+                    <ul class="submenu">
+                        <li><a href="post1.html">An Overview of Embedded Systems</a></li>
+                        <li><a href="post2.html">Serial Data Transmission</a></li>
+                        <li><a href="post3.html">The Easy Solution to the Automotive Chip Shortage</a></li>
+                        <li><a href="post4.html">Machine Learning and an Intro to ML Basics</a></li>
+                        <li><a href="post5.html">AMD Quietly Drops New Ryzen Processors Without Integrated Graphics</a></li>
+                        <li><a href="post6.html">Power Dissipation of a CMOS Inverter</a></li>
+                    </ul>
+                </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="main-content">
+              <button id="hover-button">☰</button>
+              
+          </div>
+      </div> <script>document.getElementById('hover-button').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseleave', function() {
+        document.getElementById('sidebar').style.left = '-250px';
+      });
+      
+      document.getElementById('sidebar').addEventListener('mouseover', function() {
+        document.getElementById('sidebar').style.left = '0';
+      });</script>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved user preference and apply it
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference to localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+</script>
+      <section>
+        
+        <div class="banner_image">
+          <img src="images/aut.jpg" alt="car" />
+        </div>
+        <h1>The Easy Solution to the Automotive Chip Shortage</h1>
+        <div class="about-author">
+          <h3>Written by Jack Ganssle</h3>
+          <p> May 15, 2024</p>
+        </div>
+      </section>
+      <hr />
+      <article>
+        
+        
+       
+        <p>
+            Sometimes one comes across a solution to a problem that is so mind-numbingly ridiculous one has to scream "enough!"
+            We've all heard about how the automotive industry is suffering from a shortage of chips. When the pandemic hit they cut back on 
+            semiconductor orders, anticipating a slowdown in sales. That didn't happen and now $50k cars are parked waiting for $0.50 MCUs.
+            According to this September 17, 2021  piece in Fortune, the problem is that car makers rely on parts with 45 to 90 nm geometry when
+            they should be thinking 16 nm. Indeed, Intel's chief executive Pat Gelsinger berated them for this poor decision making, and says 
+            he's willing to "make them as many Intel 16 [nanometer] chips as they want."     
+            Obviously, Mr. Gelsinger has a point. Why use a ten cent MCU to control a window motor when a $300 Intel Inside® microprocessor can 
+            raise that window in nanoseconds? Customers are sick of waiting literally for seconds for windows to raise and lower. And using a Core
+            I7 processor means the windows can use Windows 11 which will provide (according to Microsoft) "A new Windows experience bringing you 
+            closer to the people and things you love." Studies have shown that drivers are more than willing to wait in their driveways for a
+            half hour for the frequent OS upgrades to install when the benefit is being closer to the people you love, including the screaming
+            kids.
+            Of course, the $300 CPU will need 16 GB of RAM, a 1 TB hard disk, network controller for OS updates, and a 32-layer PCB. At some 100 
+            amps figure on a pair of 2/0 battery cables to feed the thing. With luck the 0.605" diameter of those cables won't impede smooth door
+            openings and closings all that much, and the buck-a-foot price multiplied by the 50 to 100 controllers in the average car won't affect
+            the vehicle's sales price by more than 50% or so. Counter-rotating cooling fans will prevent the vehicle from spinning on its axis at 
+            power-up.      
+            At 100+ watts per processor the car's air conditioner would have to be beefed up to a three-ton unit. But that would fit comfortably on 
+            the roof. Many vehicles come with towing hitches, which could conveniently tow the cooling unit's 20kW generator. Quick-disconnect 200
+            conductor 2/0 cable connectors are in development.
+            I guess the corollary to this thinking is that using (gasp!) 8 bit MCUs instead of the latest in processor technology is engineering 
+            malpractice. What designer would consign his products to dead-end 45 nm technology? Sure, it is cheap, proven reliable, and a good fit
+            for the application. But the benefits of higher cost, lower reliability, longer startup times and massive profits for Intel are just
+            too obvious to state. 
+            The article in Fortune concludes: "If semiconductor suppliers like Intel and Qualcomm have their way, however, the days of the auto 
+            industry relying on these cheap commodity chips are numbered." (Emphasis added)
+            Ya think?
+            (It's strangely appropriate that when writing this I wanted to go to Microsoft's site for the quote above, but based on my browsing 
+            history Firefox suggested "Microchip" instead.)
+        </p>
+
+      </article>
+      
+    </main>
+    <hr />
+    <footer>
+      <p>Made by Aslane Anass & Qobebi Oualid</p>
+
+
+    </footer>
+
+  </body>
